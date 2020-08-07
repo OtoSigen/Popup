@@ -1,0 +1,43 @@
+body {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  width: 100%;
+  height: 100vh;
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.button {
+  margin: 0;
+  z-index: 1;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  border: 2px solid green;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.content__header {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.content__main {
+  display: flex;
+  flex-flow: column nowrap;
+}
