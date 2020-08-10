@@ -89,7 +89,8 @@ body {
 }
 
 .main__input {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   height: 60px;
   border-radius: 60px;
   border: none;
@@ -103,7 +104,8 @@ body {
 
 .button__popup-open,
 .main__button {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   height: 60px;
   border-radius: 60px;
   border: none;
