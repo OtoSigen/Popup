@@ -3,25 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fonts.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popup</title>
   </head>
   <body>
-    <button id="popup-open" class="button">Кнопка</button>
+    <button id="popup-open" class="button__popup-open">Открыть popup</button>
     <div id="popup" class="popup hide">
       <div class="popup__content">
         <div class="content__header">
-          <h1>Запись в клинику</h1>
-          <p>Также вы можете записаться по телефону +7 495 777 77 00</p>
-          <button id="popup-close" class="button">Close</button>
+          <h1 class="content__title">Запись в клинику</h1>
+          <p class="content__phone">
+            Также вы можете записаться по телефону +7 495 777 77 00
+          </p>
+          <button
+            id="content__popup-close"
+            class="button__close-modal"
+          ></button>
         </div>
         <div class="content__main">
-          <img src="" alt="" />
-          <h2>Детская поликлинника №2</h2>
-          <p>Пушкина, 234</p>
-          <input type="text" placeholder="Ваше имя" />
-          <input type="text" placeholder="Ваш номер телефона" />
-          <button>Записаться</button>
+          <img class="main__logo" src="./public/img/logo.png" alt="" />
+          <h2 class="main__title">Детская поликлинника №2</h2>
+          <p class="main__address">Пушкина, 234</p>
+          <input class="main__input" type="text" placeholder="Ваше имя" />
+          <input
+            class="main__input"
+            type="text"
+            placeholder="Ваш номер телефона"
+          />
+          <button class="main__button">Записаться</button>
+          <div class="main__checkbox">
+            <input class="checkbox" type="checkbox" checked />
+            <p class="checkbox__text">
+              Отправляя заявку вы соглашаетесь с
+              <a href="#" class="checkbox__link"
+                >пользовательским соглашением</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="content__footer">
+          <p class="footer__description">
+            После отправки с вами в ближайшее время свяжется специалист
+            call-центра и уточнит все интересующие вопросы.
+          </p>
         </div>
       </div>
     </div>

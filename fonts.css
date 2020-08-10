@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Circe Light";
+  src: url("./public/fonts/circe_light.eot"); /* IE 9 Compatibility Mode */
+  src: url("./public/fonts/circe_light.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("./public/fonts/circe_light.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./public/fonts/circe_light.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./public/fonts/circe_light.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./public/fonts/circe_light.svg#circe_light")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("./public/fonts/circe.eot"); /* IE 9 Compatibility Mode */
+  src: url("./public/fonts/circe.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("./public/fonts/circe.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./public/fonts/circe.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./public/fonts/circe_light.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./public/fonts/circe.svg#circe_light")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
