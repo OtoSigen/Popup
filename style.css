@@ -20,11 +20,6 @@ body {
   display: none;
 }
 
-.button__popup-open:hover {
-  background-color: #fff;
-  color: #000;
-}
-
 .popup {
   position: absolute;
   border: 2px solid green;
@@ -51,12 +46,24 @@ body {
   font-weight: normal;
 }
 
+@media screen and (max-width: 580px) {
+  .content__title {
+    font-size: 30px;
+  }
+
+  .content__phone {
+    font-size: 10px;
+  }
+}
+
 .content__phone {
   font-family: Circe Light, sans-serif;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   font-weight: 300;
   font-size: 14px;
   color: #ccc;
+  border: 2px solid red;
 }
 
 .button__close-modal {
@@ -114,6 +121,28 @@ body {
   box-sizing: border-box;
 }
 
+.button__close-modal:focus,
+.button__popup-open:focus,
+.main__button:focus,
+.main__input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
 .button__popup-open,
 .main__button {
   width: 100%;
@@ -130,10 +159,19 @@ body {
   font-weight: normal;
 }
 
+.button__popup-open {
+  background-color: #00ace4;
+}
+
+.button__popup-open:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .main__checkbox {
   display: flex;
   flex-flow: row nowrap;
-  align-items: flex-start;
+
   margin-bottom: 70px;
 }
 

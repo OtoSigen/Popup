@@ -21,14 +21,29 @@ const inputValidate = () => {
   const inputPhone = document.getElementById("input-phone");
   const inputBtn = document.getElementById("form-btn");
 
-  inputName.addEventListener("keyup", () => {
-    const inputName = document.getElementById("input-name");
-    const inputBtn = document.getElementById("form-btn");
-    if (inputName.value.length > 5) {
+  const checkedForm = () => {
+    if (inputName.value.length > 4) {
       inputBtn.removeAttribute("disabled");
-      inputBtn.style.backgroundColor = "red";
-      console.log("checked");
+      inputBtn.style.backgroundColor = "#00ace4";
+      inputName.style.border = "none";
+    } else {
+      inputBtn.setAttribute("disabled", "disabled");
+      inputBtn.style.backgroundColor = "rgb(191, 192, 193)";
+      inputName.style.border = "1px solid red";
     }
-  });
+    if (inputPhone.value.length > 7) {
+      inputBtn.removeAttribute("disabled");
+      inputBtn.style.backgroundColor = "#00ace4";
+      inputPhone.style.border = "none";
+    } else {
+      inputBtn.setAttribute("disabled", "disabled");
+      inputBtn.style.backgroundColor = "rgb(191, 192, 193)";
+      inputPhone.style.border = "1px solid red";
+    }
+  };
+
+  inputName.addEventListener("keyup", checkedForm);
+  inputPhone.addEventListener("keyup", checkedForm);
 };
+
 inputValidate();
