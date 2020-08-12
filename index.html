@@ -12,10 +12,12 @@
     <div id="popup" class="popup hide">
       <div class="popup__content">
         <div class="content__header">
-          <h1 class="content__title">Запись в клинику</h1>
-          <p class="content__phone">
-            Также вы можете записаться по телефону +7 495 777 77 00
-          </p>
+          <div class="content__header-wrap">
+            <h1 class="content__title">Запись в клинику</h1>
+            <p class="content__phone">
+              Также вы можете записаться по телефону +7 495 777 77 00
+            </p>
+          </div>
           <button
             id="content__popup-close"
             class="button__close-modal"
@@ -25,7 +27,7 @@
           <img class="main__logo" src="./public/img/logo.png" alt="" />
           <h2 class="main__title">Детская поликлинника №2</h2>
           <p class="main__address">Пушкина, 234</p>
-          <form action="#" class="main__form" type="submit">
+          <form action="#" class="main__form">
             <input
               class="main__input"
               type="text"
@@ -41,15 +43,22 @@
             <button id="form-btn" class="main__button" type="submit" disabled>
               Записаться
             </button>
-            <div class="main__checkbox">
-              <input class="checkbox" type="checkbox" checked />
+
+            <label for="checkbox__text" class="main__checkbox">
+              <input
+                class="checkbox"
+                type="checkbox"
+                checked
+                id="checkbox__text"
+              />
+
               <p class="checkbox__text">
                 Отправляя заявку вы соглашаетесь с
                 <a href="#" class="checkbox__link"
                   >пользовательским соглашением</a
                 >
               </p>
-            </div>
+            </label>
           </form>
         </div>
         <div class="content__footer">

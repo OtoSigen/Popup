@@ -1,15 +1,15 @@
 body {
   background-color: lightgray;
   max-width: 1600px;
+  min-width: 320px;
   width: 100%;
   height: 1000px;
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid red;
 }
 
 .show {
@@ -22,8 +22,8 @@ body {
 
 .popup {
   position: absolute;
-  border: 2px solid green;
   max-width: 1000px;
+  min-width: 320px;
   width: 100%;
   background-color: #fff;
   z-index: 10;
@@ -37,23 +37,24 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 130px;
-  border: 2px solid yellow;
+  padding: 3%;
+  box-sizing: border-box;
+}
+
+.content__header-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  margin-right: 2%;
 }
 
 .content__title {
   font-size: 40px;
   font-family: Circe Light, sans-serif;
   font-weight: normal;
-}
-
-@media screen and (max-width: 580px) {
-  .content__title {
-    font-size: 30px;
-  }
-
-  .content__phone {
-    font-size: 10px;
-  }
 }
 
 .content__phone {
@@ -63,7 +64,6 @@ body {
   font-weight: 300;
   font-size: 14px;
   color: #ccc;
-  border: 2px solid red;
 }
 
 .button__close-modal {
@@ -75,12 +75,16 @@ body {
   cursor: pointer;
 }
 
+.button__close-modal:focus {
+  outline: none;
+}
+
 .content__main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  border: 2px solid blue;
   background-color: rgb(239, 243, 244);
+  padding: 0 3% 0 3%;
 }
 
 .main__logo {
@@ -105,6 +109,7 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  max-width: 380px;
 }
 
 .main__input {
@@ -121,7 +126,6 @@ body {
   box-sizing: border-box;
 }
 
-.button__close-modal:focus,
 .button__popup-open:focus,
 .main__button:focus,
 .main__input:focus {
@@ -137,10 +141,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
-}
-input[type="number"]:hover,
-input[type="number"]:focus {
-  -moz-appearance: number-input;
 }
 
 .button__popup-open,
@@ -160,7 +160,7 @@ input[type="number"]:focus {
 }
 
 .button__popup-open {
-  background-color: #00ace4;
+  background-color: #0075ff;
 }
 
 .button__popup-open:hover {
@@ -168,10 +168,14 @@ input[type="number"]:focus {
   color: #000;
 }
 
+.checkbox {
+  margin-right: 10px;
+}
+
 .main__checkbox {
   display: flex;
   flex-flow: row nowrap;
-
+  align-self: flex-start;
   margin-bottom: 70px;
 }
 
@@ -189,9 +193,10 @@ input[type="number"]:focus {
 
 .content__footer {
   width: 100%;
-  border: 2px solid red;
   display: flex;
   justify-content: center;
+  padding: 0 3% 0 3%;
+  box-sizing: border-box;
 }
 
 .footer__description {
@@ -205,4 +210,20 @@ input[type="number"]:focus {
 
 .red {
   background-color: red;
+}
+
+@media screen and (max-width: 584px) {
+  .content__title {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 363px) {
+  .content__title {
+    font-size: 30px;
+  }
+
+  .content__phone {
+    font-size: 10px;
+  }
 }

@@ -24,7 +24,7 @@ const inputValidate = () => {
   const checkedForm = () => {
     if (inputName.value.length > 4) {
       inputBtn.removeAttribute("disabled");
-      inputBtn.style.backgroundColor = "#00ace4";
+      inputBtn.style.backgroundColor = "#0075ff";
       inputName.style.border = "none";
     } else {
       inputBtn.setAttribute("disabled", "disabled");
@@ -33,12 +33,16 @@ const inputValidate = () => {
     }
     if (inputPhone.value.length > 7) {
       inputBtn.removeAttribute("disabled");
-      inputBtn.style.backgroundColor = "#00ace4";
+      inputBtn.style.backgroundColor = "#0075ff";
       inputPhone.style.border = "none";
     } else {
       inputBtn.setAttribute("disabled", "disabled");
       inputBtn.style.backgroundColor = "rgb(191, 192, 193)";
       inputPhone.style.border = "1px solid red";
+    }
+
+    if (inputPhone.value.length < 7 || inputName.value.length < 4) {
+      inputBtn.setAttribute("disabled", "disabled");
     }
   };
 
